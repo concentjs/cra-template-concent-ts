@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useC2Mod } from 'configs/useC2Mod';
 import { COUNTER } from 'configs/c2Mods';
 
