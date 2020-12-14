@@ -1,6 +1,6 @@
 {
   "name": "cra-template-concent-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "react",
     "create-react-app",
@@ -8,6 +8,7 @@
     "typescript",
     "concent"
   ],
+  "main": "template.json",
   "description": "The base Concent TypeScript template for Create React App.",
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
     "node": ">=10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/concentjs/cra-template-concent-ts/issues"
   },
   "files": [
     "template",
