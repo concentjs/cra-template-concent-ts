@@ -3,10 +3,7 @@ import {
   MODULE_VOID, MODULE_DEFAULT, MODULE_GLOBAL,
   GetRootState, GetRootReducer, GetRootComputed,
 } from 'concent';
-import models from '../models';
-
-const allModels = models;
-type Models = typeof allModels;
+import { Models } from './mods';
 
 export type RootState = GetRootState<Models>;
 
