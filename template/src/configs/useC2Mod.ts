@@ -1,5 +1,5 @@
-import { useConcent } from "concent";
-import { CtxM, Modules } from "../types/store";
+import { useConcent } from 'concent';
+import { CtxM, Modules } from '../types/store';
 
 /**
  * use the target model context you want by passing a module name

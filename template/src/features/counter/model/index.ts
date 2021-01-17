@@ -8,5 +8,5 @@ export default {
     state,
     computed,
     reducer,
-  }
-}
+  },
+};

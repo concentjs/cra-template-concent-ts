@@ -2,7 +2,7 @@
 
 The official [Concent](https://github.com/concentjs/concent)+TS template for Create React App.
 
-You can checkout it from [here](https://github.com/concentjs/cra-template-concent-ts)
+You can also checkout it from [here](https://github.com/concentjs/cra-project-concent-ts)
 
 To use this template, add `--template concent-ts` when creating a new app.
 
