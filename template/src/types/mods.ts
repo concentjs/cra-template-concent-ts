@@ -1,5 +1,5 @@
 /**
- * merge all concent models in this file to infer the root model type
+ * merge all concent models in this file to infer the root modle type
  */
 import models from "../models";
 

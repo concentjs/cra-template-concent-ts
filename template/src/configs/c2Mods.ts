@@ -5,4 +5,6 @@
 
 export const COUNTER = 'Counter' as const;
 
+export const COUNTER2 = 'Counter2' as const;
+
 export type COUNTER_T = typeof COUNTER;

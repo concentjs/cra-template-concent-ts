@@ -1,8 +1,8 @@
-import React from 'react';
-import { useC2Mod } from 'configs/useC2Mod';
-import { COUNTER } from 'configs/c2Mods';
+import React from "react";
+import { useC2Mod } from "configs/useC2Mod";
+import { COUNTER } from "configs/c2Mods";
 
-export const CounterTip = React.memo(() => {
+export const CounterTip = React.memo(function CounterTip() {
   const ctx = useC2Mod(COUNTER);
   const [show, setShow] = React.useState(true);
   // module state, module computed
@@ -12,14 +12,15 @@ export const CounterTip = React.memo(() => {
   return (
     <div>
       <h2>renderCount {renderCount}</h2>
-      {show
-        ? <>
+      {show ? (
+        <>
           <span> value:{state.value}</span>
           <span> bigValue:{state.bigValue}</span>
           <span> doubleCount:{moduleComputed.doubleCount}</span>
         </>
-        : 'lost dep! module state change will not trigger CounterTip re-render'
-      }
+      ) : (
+        "lost dep! module state change will not trigger CounterTip re-render"
+      )}
       <button onClick={toggleShow}>switch CounterTip view</button>
     </div>
   );

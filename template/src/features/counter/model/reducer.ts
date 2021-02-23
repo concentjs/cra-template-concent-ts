@@ -1,24 +1,20 @@
 import { St } from './state';
-import { VoidPayloadMev, AC } from 'types/store';
+import { VoidPayload, AC } from 'types/store';
 import { COUNTER_T } from 'configs/c2Mods';
 
 type IAC = AC<COUNTER_T>;
 
-export function forCopy(payload: VoidPayloadMev, moduleState: St, ac: IAC) {
-  console.log('call ac.setState or ac.dispatch when needed', ac.setState);
-}
-
 const delay = (ms = 1000) => new Promise(r => setTimeout(r, ms));
 
-export function incrementBigValue(payload: VoidPayloadMev, moduleState: St): Partial<St> {
+export function incrementBigValue(payload: VoidPayload, moduleState: St): Partial<St> {
   return { bigValue: moduleState.bigValue + 50 };
 }
 
-export function increment(payload: VoidPayloadMev, moduleState: St): Partial<St> {
+export function increment(payload: VoidPayload, moduleState: St): Partial<St> {
   return { value: moduleState.value + 1 };
 }
 
-export function decrement(payload: VoidPayloadMev, moduleState: St): Partial<St> {
+export function decrement(payload: VoidPayload, moduleState: St): Partial<St> {
   return { value: moduleState.value - 1 };
 }
 
@@ -26,7 +22,7 @@ export function incrementByAmount(amount: number, moduleState: St): Partial<St> 
   return { value: moduleState.value + amount };
 }
 
-export async function incrementAsync(amount: number, moduleState: St): Promise<Partial<St>> {
+export async function incrementAsync(amount: number, moduleState: St, ac: IAC): Promise<Partial<St>> {
   await delay();
   // or just write ac.dispatch of return
   // await ac.dispatch(incrementByAmount, amount);

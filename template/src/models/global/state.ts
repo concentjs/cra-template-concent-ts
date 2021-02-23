@@ -1,7 +1,7 @@
 
 function getInitialState() {
   return {
-    someInfo: 'overWrite built-in module global\'s state',
+    someInfo: `overWrite built-in module global's state`,
   };
 }
 
