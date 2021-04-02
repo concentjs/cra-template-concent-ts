@@ -10,8 +10,8 @@
       "@types/jest": "^26.0.15",
       "typescript": "^4.1.2",
       "web-vitals": "^1.0.1",
-      "concent": "^2.13.8",
-      "concent-utils": "^1.1.0"
+      "concent": "^2.14.3",
+      "concent-utils": "^1.2.2"
     },
     "eslintConfig": {
       "extends": ["react-app", "react-app/jest"]
