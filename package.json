@@ -1,6 +1,6 @@
 {
   "name": "cra-template-concent-ts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "keywords": [
     "react",
     "create-react-app",
@@ -8,6 +8,9 @@
     "typescript",
     "concent"
   ],
+  "scripts": {
+    "worklocal": "cp -r ../cra-project-concent-ts/src ./template"
+  },
   "main": "template.json",
   "description": "The base Concent TypeScript template for Create React App.",
   "repository": {
