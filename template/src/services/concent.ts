@@ -161,10 +161,10 @@ export function useSetup<
 export function typeCtxM<
   M extends Modules, Setup extends ValidSetup, P extends IAnyObj, CuDesc extends MultiComputed<any>,
   Extra extends IAnyObj, StaticExtra extends any, Mp extends ValidMapProps,
-  >(moduleName: M, options?: Options<P, Setup, CuDesc, Extra, StaticExtra, Mp>) {
-  noop(moduleName, options);
+  >(moduleName: M, options?: Options<P, Setup, CuDesc, Extra, StaticExtra, Mp>, ctx?: any) {
+  noop(moduleName, options, ctx);
   type Ctx = CtxM<P, M, SettingsType<Setup>, ComputedValType<CuDesc>, [Extra, StaticExtra, ReturnType<Mp>]>;
-  return {} as Ctx;
+  return (ctx || {}) as Ctx;
 }
 
 /**

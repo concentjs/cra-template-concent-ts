@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import { Counter } from 'features/counter/Counter';
 import Counter2 from 'features/counter2';
 import { CounterTip } from 'features/counter/CounterTip';
+import TestComp from 'features/test-comp/TestComp';
 import './App.css';
 import { useSetup } from 'services/concent';
 import { CtxDe } from 'types/store';
@@ -31,12 +32,14 @@ function setup(ctx: CtxDe) {
       const { selectedKey } = n;
       if (selectedKey === '1') return <Counter />
       else if (selectedKey === '2') return <Counter2 />
+      else if (selectedKey === '3') return <TestComp />
       else return `unknown selectedKey ${selectedKey}`
     },
     tip(n) {
       const { selectedKey } = n;
-      if (selectedKey === '1') return <h1>hey you are choosing 1</h1>
-      else return <h2>Counter2 model is a better code organization</h2>
+      if (selectedKey === '1') return <h1>hey you are choosing 1</h1>;
+      else if (selectedKey === '2') return <h2>Counter2 model is a better code organization</h2>;
+      else if (selectedKey === '3') return <h2>hey TestComp</h2>;
     },
   });
 
@@ -57,8 +60,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <button data-skey="1" onClick={settings.handleClick}>see counter</button>
-        <button data-skey="2" onClick={settings.handleClick}>see counter2</button>
+        <div>
+          <button data-skey="1" onClick={settings.handleClick}>see counter</button>
+          <button data-skey="2" onClick={settings.handleClick}>see counter2</button>
+          <button data-skey="3" onClick={settings.handleClick}>see TestComp</button>
+        </div>
         {settings.rcu.tip}
         {settings.rcu.content}
         <p>
